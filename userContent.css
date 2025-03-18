@@ -1,0 +1,504 @@
+:root {
+  --border-radius-large: 24px;
+  --space-xsmall: 10px;
+  --primary-color: #ff7139;
+  --secondary-color: #99999954;
+  --border-color: #c4c4c448;
+  --background-blur: blur(3px);
+  --transition-ease: 0.3s ease;
+  --hover-scale: 1.05;
+  --background-color-base: #42414dbd;
+  --border-radius-medium: 12px !important;
+  --border-radius-large: 18px !important;
+}
+
+@-moz-document url("about:newtab") {
+
+  /* GENERAL */
+  .category-list {
+    grid-auto-rows: 108px !important;
+  }
+
+  /* LOGO Y WORDMARK */
+
+  /* Ocultar el logo y la marca
+  .logo-and-wordmark {
+    display: none !important;
+  } */
+
+  .layout-variant-a.no-recommended-stories .logo-and-wordmark,
+  .layout-variant-b.no-recommended-stories .logo-and-wordmark {
+    position: fixed !important;
+    top: 36px !important;
+    left: 40px !important;
+  }
+
+  
+  /* BUSCADOR */
+
+  .search-wrapper .search-handoff-button {
+    border-radius: 30px !important;
+    margin-top: 5px !important;
+    border: none !important;
+  }
+
+  .fake-caret {
+    margin-top: 3px !important;
+  }
+
+
+  /* GENERAL */
+  .collapsible-section {
+    padding: 10px 35px !important;
+  }
+
+  .layout-variant-a.has-weather.no-search .outer-wrapper,
+  .layout-variant-b.has-weather.no-search .outer-wrapper,
+  .outer-wrapper {
+    padding-top: 35px !important;
+  }
+
+
+  /* CLIMA */
+
+  .no-search.layout-variant-b .weather,
+  .layout-variant-b .weather {
+    inset-block-start: 39px !important;
+    position: fixed !important;
+  }
+
+  .weatherCard {
+    border-radius: var(--border-radius-large) !important;
+    outline: 1px solid rgba(161, 161, 161, 0.301) !important;
+    backdrop-filter: var(--background-blur) !important;
+    overflow: hidden !important;
+    max-width: fit-content !important;
+  }
+
+  .lightWallpaper .weatherInfoLink,
+  .darkWallpaper .weatherInfoLink,
+  .lightWallpaper .weatherButtonContextMenuWrapper,
+  .darkWallpaper .weatherButtonContextMenuWrapper {
+    background-color: var(--background-color-base) !important;
+  }
+
+
+  .weatherButtonContextMenu {
+    background-image: url("chrome://global/skin/icons/developer.svg") !important;
+  }
+
+  .weatherButtonContextMenuWrapper:focus {
+    background-color: var(--primary-color) !important;
+    border-radius: var(--border-radius-large) !important;
+  }
+
+  .weatherButtonContextMenuWrapper::after {
+    border: none !important;
+    background: var(--border-color) !important;
+    height: 100% !important;
+    top: 0 !important;
+  }
+
+  .weatherInfoLink {
+    border-radius: var(--border-radius-large) !important;
+    overflow: hidden !important;
+  }
+
+  .weatherCard:hover>a.weatherInfoLink {
+    overflow: hidden !important;
+    border-radius: var(--border-radius-large) 0 0 var(--border-radius-large) !important;
+    transition: border-radius var(--transition-ease) !important;
+  }
+
+  .weatherCard:focus-within {
+    overflow: visible !important;
+  }
+
+  .weatherButtonContextMenu {
+    overflow: hidden !important;
+  }
+
+  .weatherButtonContextMenuWrapper {
+    width: 0 !important;
+    opacity: 0 !important;
+    border-radius: 0 var(--border-radius-large) var(--border-radius-large) 0 !important;
+    transition: width var(--transition-ease),
+      opacity .3s ease !important;
+  }
+
+  .weatherCard:hover>.weatherButtonContextMenuWrapper,
+  .weatherButtonContextMenuWrapper:hover {
+    width: 45px !important;
+    opacity: 1 !important;
+  }
+
+  .weatherSponsorText {
+    font-size: 9px !important;
+    left: -9px !important;
+    position: relative !important;
+    z-index: -1 !important;
+  }
+
+
+
+  /* ITEMS */
+
+  .lightWallpaper .top-site-outer {
+    color-scheme: light !important;
+  }
+
+  .top-sites-list .hide-for-narrow {
+    display: inline-block !important;
+    /* Fuerza la visibilidad de los ITEMS en todos los tamaños */
+  }
+
+  .layout-variant-a .top-sites-list,
+  .layout-variant-b .top-sites-list {
+    display: grid !important;
+    grid-template-columns: repeat(8, 1fr) !important;
+    row-gap: var(--space-xsmall) !important;
+  }
+
+  .top-site-outer .title {
+    font-size: 13px !important;
+  }
+
+  .top-site-outer .tile {
+    border-radius: 50px !important;
+    background-color: var(--secondary-color) !important;
+    border: 1px solid #c4c4c425 !important;
+    transition: background-color 0.4s ease !important;
+    backdrop-filter: blur(3px) !important;
+    /* Efecto vidrio esmerilado */
+  }
+
+  .top-site-outer:hover .tile {
+    animation: grow 0.2s forwards !important;
+  }
+
+  @keyframes grow {
+    0% {
+      transform: scale(1);
+    }
+
+    100% {
+      transform: scale(1.12);
+    }
+  }
+
+  .outer-wrapper .ds-top-sites .top-sites .top-site-outer .top-site-inner>a:is(.active, :focus) .tile {
+    outline: var(--focus-outline) !important;
+  }
+
+  .top-site-inner>a {
+    border: 1px solid transparent !important;
+  }
+
+  .top-site-outer .top-site-inner>a:hover {
+    background-color: none !important;
+  }
+
+
+  .top-site-outer:hover,
+  .top-site-inner:hover {
+    background-color: transparent !important;
+    display: block !important;
+  }
+
+  .top-site-outer .top-site-icon {
+    background-color: transparent !important;
+    border-radius: 3px !important;
+  }
+
+  .top-sites-list .top-site-outer .title .title-label {
+    line-height: 1.3 !important;
+    width: 90px !important;
+    text-overflow: unset !important;
+    max-width: 85px !important;
+    mask-image: linear-gradient(to right, rgba(0, 0, 0, 1) 85%, rgba(0, 0, 0, 0));
+    background-color: transparent !important;
+  }
+
+  .top-site-outer .top-site-inner>a {
+    padding: 0px !important;
+    border: 1px solid transparent !important;
+  }
+
+  .top-sites-list:not(.dnd-active) .top-site-outer:is(.active, :focus, :hover) {
+    /* background: rgb(93, 83, 83); */
+    background: none !important;
+  }
+
+
+  /* 3 PUNTITOS */
+
+  .context-menu-button {
+    background-color: transparent !important;
+    border-radius: 24px !important;
+  }
+
+  .top-site-inner .context-menu-button {
+    opacity: 0 !important;
+    transition: opacity var(--transition-ease), transform 0.2s ease-in-out !important;
+    transition-delay: .6s !important;
+  }
+
+  .top-site-inner:hover .context-menu-button {
+    opacity: 0.7 !important;
+  }
+
+  .top-site-inner .context-menu-button:hover {
+    opacity: 1 !important;
+    transition-delay: 0s !important;
+  }
+
+  .context-menu-button:hover {
+    background-color: var(--primary-color) !important;
+    transform: scale(1.2) !important;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.3) !important;
+    transition: all var(--transition-ease) !important;
+  }
+
+  .card-outer .context-menu-button {
+    background-color: var(--primary-color) !important;
+    inset-inline-end: -9px !important;
+    top: -9px !important;
+  }
+
+
+
+  /* RECENT ACTIVITY */
+
+  .card-outer,
+  .card a,
+  .card-outer .card {
+    border-radius: var(--border-radius-large) !important;
+  }
+
+  .card-outer .card {
+    box-shadow: 0 3px 9px rgba(92, 92, 92, 0.199) !important;
+  }
+
+  .layout-variant-a .ds-outer-wrapper-breakpoint-override main .ds-highlights .card-outer,
+  .layout-variant-b .ds-outer-wrapper-breakpoint-override main .ds-highlights .card-outer {
+    min-width: 185px !important;
+  }
+
+  .ds-highlights .section .section-list .card-outer {
+    height: 175px !important;
+    background-color: #42414dbd !important;
+    border-radius: 18px !important;
+    backdrop-filter: blur(3px) !important;
+    /* Efecto vidrio esmerilado */
+    transition: transform 0.3s ease !important;
+    position: relative !important;
+    z-index: 0 !important;
+  }
+
+  .ds-highlights .section .section-list .card-outer:hover {
+    transform: scale(1.05) !important;
+    z-index: 1 !important;
+  }
+
+  .card-outer .card-preview-image-outer {
+    border-radius: 18px 18px 5px 5px !important;
+  }
+
+  .compact-cards .card-outer .card-context {
+    clip-path: none !important;
+  }
+
+
+
+  /* WALLPAPER ATTRIBUTION */
+
+  /* .wallpaper-attribution {
+    display: none !important;
+    visibility: hidden !important;
+  } */
+
+  .wallpaper-attribution {
+    white-space: nowrap !important;
+    width: 21px !important;
+    height: 32px !important;
+    padding: 7px 15px !important;
+    background-color: var(--background-color-base) !important;
+    border: 1px solid var(--border-color) !important;
+    border-radius: 100px !important;
+    position: fixed !important;
+    bottom: 10px !important;
+    left: 30px !important;
+    opacity: .7 !important;
+    background-image: url("chrome://global/skin/icons/info.svg") !important;
+    background-size: 18px 18px !important;
+    background-repeat: no-repeat !important;
+    background-position: 6.4px center !important;
+    overflow: hidden !important;
+    color: transparent !important;
+    transition: all 0.3s ease-in-out !important;
+    color-scheme: dark !important;
+  }
+
+  p.wallpaper-attribution:hover {
+    color: white !important;
+    padding: 6px 15px 3px 33px !important;
+    width: fit-content !important;
+    opacity: .9 !important;
+    background-color: var(--primary-color) !important;
+    white-space: nowrap !important;
+  }
+
+
+
+  /* BOTÓN DE CONFIGURACIÓN */
+
+  .personalize-button {
+    border: 1px solid var(--border-color) !important;
+    border-radius: 21px !important;
+    background-color: var(--background-color-base) !important;
+    transition: transform 0.3s ease, background-color 1.5s ease !important;
+    transform-origin: center !important;
+    opacity: .7 !important;
+  }
+
+  .icon.personalize-button {
+    color: azure !important;
+  }
+
+  .personalize-button:hover {
+    transform: rotate(120deg) !important;
+    background-color: var(--primary-color) !important;
+    opacity: 1 !important;
+  }
+
+}
+
+
+
+/* RESPONSIVE */
+
+@media (max-width: 1270px) {
+  .search-wrapper .search-inner-wrapper {
+    width: 65% !important;
+  }
+}
+
+@media (max-width: 1222px) {
+
+  .search-wrapper .search-inner-wrapper {
+    width: 45% !important;
+  }
+
+
+  .layout-variant-a .top-sites-list,
+  .layout-variant-b .top-sites-list {
+    grid-template-columns: repeat(6, 1fr) !important;
+  }
+
+  .logo-and-wordmark {
+    transform: scale(0.8) !important;
+    transform-origin: left top !important;
+  }
+
+  .weather {
+    inset-inline-end: 25px !important;
+  }
+}
+
+@media (max-width: 1122px) {
+
+  .ds-highlights .section .section-list {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  .wordmark {
+    display: none !important;
+  }
+}
+
+@media (max-width: 865px) {
+
+  .weatherCard:hover>a.weatherInfoLink {
+    border-radius: var(--border-radius-large) !important;
+  }
+
+  .layout-variant-a .top-sites-list,
+  .layout-variant-b .top-sites-list {
+    grid-template-columns: repeat(5, 1fr) !important;
+  }
+
+  .has-weather.has-search.layout-variant-a .weatherSponsorText span,
+  .has-weather.has-search.layout-variant-b .weatherSponsorText span,
+  .layout-variant-a .weatherSponsorText span,
+  .layout-variant-b .weatherSponsorText span {
+    white-space: break-spaces !important;
+    position: absolute !important;
+    top: 0px !important;
+    right: -7px !important;
+  }
+}
+
+
+@media (max-width: 722px) {
+
+  .weatherCard:hover>a.weatherInfoLink {
+    border-radius: var(--border-radius-large) !important;
+  }
+
+  .layout-variant-a .top-sites-list,
+  .layout-variant-b .top-sites-list {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+
+  .ds-highlights .section .section-list {
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+
+  .logo-and-wordmark,
+  .weatherCard {
+    transform: scale(0.8) !important;
+    transform-origin: left top !important;
+  }
+
+  .weatherCard {
+    margin-top: -10px !important;
+    margin-right: -24px !important;
+  }
+
+  .has-weather.has-search.layout-variant-a .weatherSponsorText span,
+  .has-weather.has-search.layout-variant-b .weatherSponsorText span,
+  .layout-variant-a .weatherSponsorText span,
+  .layout-variant-b .weatherSponsorText span {
+    white-space: break-spaces !important;
+    position: absolute !important;
+    top: -12px !important;
+    right: -20px !important;
+  }
+
+  .logo-and-wordmark {
+    margin-top: -10px !important;
+    margin-left: -15px !important;
+  }
+
+  .search-wrapper .search-handoff-button {
+    margin-top: -10px !important;
+    max-height: 50px !important;
+  }
+
+  .fake-caret {
+    margin-top: -12px !important;
+  }
+}
+
+@media (height > 700px) {
+
+  .fixed-search .search-wrapper {
+    background-color: transparent !important;
+    border: 1px solid transparent !important;
+    margin-top: 7px !important;
+  }
+
+  .logo-and-wordmark {
+    display: block !important;
+  }
+}

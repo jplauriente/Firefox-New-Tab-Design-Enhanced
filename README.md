@@ -3,12 +3,12 @@ Works perfectly in the latest Firefox desktop version (v.136)
 
 ## Changes, Redisignings and Enhancings
 
-1. *Wheater Widget* visualization and effects enhancements
-2. *Tiles* completely redisigned and renewed
-3. *Tiles tiles* now has degradé at the end
+1. *Tiles* completely redisigned and renewed
+2. *Tiles titles* now has degradé at the end
+3. *Wheater Widget* visualization and effects enhancements
 4. *Responsive Design Enhanced*; 5 sizes that looks always perfect
 5. Search bar behavior and design enhanced
-6. Recent Activity, Wallpaper attribution and configuration button redisigned
+6. *Recent Activity*, *Wallpaper attribution* and *configuration button* redisigned
 7. A lot of little details revised and improved
 
 

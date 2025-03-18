@@ -1,30 +1,31 @@
-# Firefox New Tab Design Enhanced
-Works perfectly in the latest Firefox desktop version (v.136)
+# **Firefox New Tab Design Enhanced**  
+Works perfectly with the latest Firefox desktop version (v136).  
 
-## Changes, Redisignings and Enhancings
+## **Changes, Redesign, and Enhancements**  
 
-1. *Tiles* completely redisigned and renewed
-2. *Tiles titles* now has degradé at the end
-3. *Wheater Widget* visualization and effects enhancements
-4. *Responsive Design Enhanced*; 5 sizes that looks always perfect
-5. Search bar behavior and design enhanced
-6. *Recent Activity*, *Wallpaper attribution* and *configuration button* redisigned
-7. A lot of little details revised and improved
+1. *Tiles* completely redesigned and renewed.  
+2. *Tile titles* now have a gradient effect at the end.  
+3. *Weather Widget* visualization and effects improved.  
+4. *Responsive Design Enhanced* – five sizes that always look perfect.  
+5. Search bar behavior and design improved.  
+6. *Recent Activity*, *Wallpaper Attribution*, and *Configuration Button* redesigned.  
+7. Many small details revised and improved.  
 
+## **How to Use userContent.css**  
 
-## How to use userContent.css
-### 1· Find your profile folder
+### **1. Find Your Profile Folder**  
 
-- Open Firefox and type **about:profiles** in the address bar
-- Look for the ***Profile in use*** and open its root directory
-- Create a fold called ***chrome*** into the root of your choosen profile
-- Paste **userContent.css** file into **/chrome** folder
+- Open Firefox and type **about:profiles** in the address bar.  
+- Look for the ***Profile in use*** and open its root directory.  
+- Create a folder called ***chrome*** inside the root of your chosen profile.  
+- Paste the **userContent.css** file into the **/chrome** folder.  
 
-### 2· Enable customizations in Firefox
+### **2. Enable Customizations in Firefox**  
 
- - Open a new tab and type **about:config** in the address bar
- - Click ***Accept the Risk and Continue***
- - Search for the preference **toolkit.legacyUserProfileCustomizations.stylesheets**
- - If it is set to ***false***, change it to ***true*** by clicking the toggle button
+- Open a new tab and type **about:config** in the address bar.  
+- Click ***Accept the Risk and Continue***.  
+- Search for the preference **toolkit.legacyUserProfileCustomizations.stylesheets**.  
+- If it is set to ***false***, change it to ***true*** by clicking the toggle button.  
 
-### 3· Restart Firefox and Enjoy 😊
+### **3. Restart Firefox and Enjoy! 😊**  
+
